@@ -7,10 +7,14 @@
                 document.body.style.backgroundColor = colorName;
             }
         </script>
-        
+        <style>
+            span {
+                font-weight:bold;
+            }
+        </style>
     </head>
     <body>
-    <txt>Hi! My name is Sam and my favorite colors are <span id="span1">red</span>, <span id="span2">blue</span>, and <span id ="span3">green</span>. </txt>
+    <txt>Hi! My name is Sam and my favorite colors are <span onmouseover=changeColor("red")>red</span>, <span onmouseover=changeColor("blue")>blue</span>, and <span onmouseover=changeColor("green")>green</span>. </txt>
         
     </body>
 </html>
