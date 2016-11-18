@@ -7,18 +7,20 @@ and open the template in the editor.
 <html>
     <head>
         <title>To Do List</title>
-        <script>
-            function testHTML{
-                var userInput = document.getElementById("inputText");
-                var span = document.getElementById("span2");
-                userInput.innerHTML = 
-                var button = 
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script> 
+            function addItem(){
+                var node = document.createElement("LI");
+                var textnode = document.body.getElementByID("todo");
+                node.appendChild(textnode);
+                document.body.getElementById(list).appendChild(node);
             }
         </script>
     </head>
     
     <body>
-        <textarea rows="10" cols="80" id="inputText" onclick="clicked();"></textarea>
-        
+        <textarea id="todo"></textarea>
+        <button onclick="addItem()">Add</button>
+        <ul id="list"></ul>
     </body>
 </html>
