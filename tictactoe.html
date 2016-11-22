@@ -6,63 +6,59 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Tic Tac Toe</title>
         <style>
-            table {
-                width: 300px;
-                height: 300px;
+            body{
+                background-color: #00cc33;
             }
             th, td {
                 border: 1px solid black;
+                width: 100px;
+                height: 100px;
+                font-size: 50px;
+                text-align: center;
+                color: black;
             }
         </style>
         <script>
-            var player = x;
-            function play(){
-                
+            var tic1 = document.getElementById("1");
+            var tic2 = document.getElementById("2");
+            var tic3 = document.getElementById("3");
+            var tic4 = document.getElementById("4");
+            var tic5 = document.getElementById("5");
+            var tic6 = document.getElementById("6");
+            var tic7 = document.getElementById("7");
+            
+            var player = "x";
+            function play(z){
+                var tic = document.getElementById(z);
+                if(tic.textContent==""){
+                    tic.textContent = player;
+                    if(player=="x"){
+                        player = "o";
+                    }else{
+                        player = "x";
+                    }
+                }
             }
         </script>
     </head>
     <body>
         <table>
             <tr>
-                <td id="1" onclick="play('1')">
-                    
-                </td>
-                
-                <td id="2" onclick="play('2')">
-                    
-                </td>
-                
-                <td id="3" onclick="play('3')">
-                    
-                </td>
+                <td id="1" onclick="play('1')"></td>
+                <td id="2" onclick="play('2')"></td>
+                <td id="3" onclick="play('3')"></td>
             </tr>
             <tr>
-                <td id="4" onclick="play('4')">
-                    
-                </td>
-                
-                <td id="5" onclick="play('5')">
-                    
-                </td>
-                
-                <td id="6" onclick="play('6')">
-                    
-                </td>
+                <td id="4" onclick="play('4')"></td>
+                <td id="5" onclick="play('5')"></td>
+                <td id="6" onclick="play('6')"></td>
             </tr>
             <tr>
-                <td id="7" onclick="play('7')">
-                    
-                </td>
-                
-                <td id="8" onclick="play('8')">
-                    
-                </td>
-                
-                <td id="9" onclick="play('9')">
-                    
-                </td>
+                <td id="7" onclick="play('7')"></td>
+                <td id="8" onclick="play('8')"></td>
+                <td id="9" onclick="play('9')"></td>
             </tr>
         </table>
     </body>
