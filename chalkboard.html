@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>To Do List</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script> 
+            function addItem(){
+                var node = document.createElement("LI");
+                var textnode = document.getElementById("inputText");
+                node.textContent = textnode.value;
+                document.getElementById("list").appendChild(node);
+            }
+        </script>
+    </head>
+    
+    <body>
+        <textarea id="inputText"></textarea>
+        
+        <button onclick="addItem()">add</button>
+        <ul id="list"></ul>
+    </body>
+</html>
