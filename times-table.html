@@ -12,30 +12,108 @@
             td {
                 text-align: right;
             }
+            body{
+                background-color: blueviolet;
+            }          
         </style>
     </head>
     <body onload="buildTimesTable()">
         <script>
             function buildTimesTable() {
                 // Create a table for the multiplication table
-                for(var j = 0; j < 10; j++){
-                    var row = document.createElement("tr");
-                    timesTable.appendChild("tr");
-                    for(var i = 0; i < 10; i++){
-                        var column = document.createElement("td");
-                        row.appendChild("td");
-                    }
+                var timesTable = document.createElement('table');
+                document.body.appendChild(timesTable);
+                for(var i = 0; i < 11; i++){
+                    var tableRow = document.createElement('tr');
+                    timesTable.appendChild(tableRow);
+                    for(var j = 0; j < 11; j++){
+                        var tableData = document.createElement('td');
+                        tableRow.appendChild(tableData);
+                        if(i == 0){
+                            tableData.textContent = j;
+                        }
+                        else{
+                            if(j == 0){
+                                tableData.textContent = i;
+                            }else{
+                                tableData.textContent = j * i;
+                            }
+                        }if(i == 0){
+                            tableData.style.backgroundColor = "red";
+                        }
+                        if(i == 3){
+                            tableData.style.backgroundColor = "red";
+                        }
+                        if(i == 6){
+                            tableData.style.backgroundColor = "red";
+                        }
+                        if(i == 9){
+                            tableData.style.backgroundColor = "red";
+                        }
+                        if(j == 0){
+                            tableData.style.backgroundColor = "orange";
+                        }
+                        if(j == 3){
+                            tableData.style.backgroundColor = "orange";
+                        }
+                        if(j == 6){
+                            tableData.style.backgroundColor = "orange";
+                        }
+                        if(j == 9){
+                            tableData.style.backgroundColor = "orange";
+                        }
+                        if(j == 0 && i == 9){
+                            tableData.style.backgroundColor = "cyan";
+                        }
+                        if(j == 3 && i == 6){
+                            tableData.style.backgroundColor = "cyan";
+                        }
+                        if(j == 6 && i == 3){
+                            tableData.style.backgroundColor = "cyan";
+                        }
+                        if(j == 9 && i == 0){
+                            tableData.style.backgroundColor = "cyan";
+                        }
+                        if(j == 0 && i == 6){
+                            tableData.style.backgroundColor = "cyan";
+                        }
+                        if(j == 3 && i == 9){
+                            tableData.style.backgroundColor = "cyan";
+                        }
+                        if(j == 6 && i == 0){
+                            tableData.style.backgroundColor = "cyan";
+                        }
+                        if(j == 9 && i == 3){
+                            tableData.style.backgroundColor = "cyan";
+                        }
+                        if(j == 0 && i == 3){
+                            tableData.style.backgroundColor = "cyan";
+                        }
+                        if(j == 3 && i == 0){
+                            tableData.style.backgroundColor = "cyan";
+                        }
+                        if(j == 6 && i == 9){
+                            tableData.style.backgroundColor = "cyan";
+                        }
+                        if(j == 9 && i == 6){
+                            tableData.style.backgroundColor = "cyan";
+                        }
+                        if(j == 0 && i == 0){
+                            tableData.style.backgroundColor = "yellow";
+                        }
+                        if(j == 3 && i == 3){
+                            tableData.style.backgroundColor = "cyan";
+                        }
+                        if(j == 6 && i == 6){
+                            tableData.style.backgroundColor = "cyan";
+                        }
+                        if(j == 9 && i == 9){
+                            tableData.style.backgroundColor = "cyan";
+                        }
+                    }                                      
                 }
-                var timesTable = document.createElement("table");
-                timesTable.id = "timesTable";
-                
-                
-                // Add the table to the document's body
                 var body = document.body;
-                body.appendChild(timesTable);
-                
-                // Fill in the multiplication table
-                
+                body.appendChild(timesTable);   
             }
         </script>
     </body>
