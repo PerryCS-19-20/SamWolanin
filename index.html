@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
 	<head>
+        <script src="sitemap.js">
+            function clicked(){
+                alert("hey, you clicked");
+            }
+        </script>
 		<style>
 			body {
 				background-color: #0000ff;
@@ -10,41 +15,39 @@
                         a:link {color:orangered}
                         a:hover {color: #00ff00}
                         a:visited {color: #ff00ff}
+                        .abc{
+                            text-align: left;
+                        }
 		</style>
 		<title>My Website</title>
+                <link rel="stylesheet" type="text/css" href="menubar.css">
 	</head>
-        <script>
-            function clicked(){
-                alert("hey, you clicked");
-            }
-        </script>
-	<body>
-		<h1>Sam Wolanin</h1>
-                <img src="YoloSwag.jpg">
-		<h2>About Me:</h2>
-		
-			<p>I like to play football and wrestle</p>
-			<p>I am in my junior year of high school at Perry</p>
-			<p>I'm 16 years old</p>
-			<p>I LOVE italian food</p>
-			<p>I have a pet dog named Rez</p>
-		
-		<br>
-		<p>In Software Engineering I want to learn how i could apply this to my life without making a career out of it</p>
-		<br>
-		<a href="https://codehs.com/">
-			CodeHS
-		</a>
-		<br>
-                
-        <center><a href="https://perryma.tk/SamWolanin/popup.html">Popup!</a></center>
-        <center><a href="https://perryma.tk/SamWolanin/breakout.html">The First Game I Made!</a></center>
-        <center><a href="https://perryma.tk/SamWolanin/JavaEvents.html">Hey! Check out some of my favorite colors!</a></center>
-        <center><a href="https://perryma.tk/SamWolanin/todolist.html">Need help organizing your plans?</a></center>
-        <center><span onclick="clicked();"><a href="https://perryma.tk/SamWolanin/Top5Songs.html">Here's a list of the top 5 songs of the 20<sup>th</sup> century</a></span></center>
-        <center><a href="https://perryma.tk/SamWolanin/times-table.html">Hey kids, do you wanna do some math?</a></center>
-        <center><a href="https://perryma.tk/SamWolanin/tictactoe.html">Check out the second game I've made!</a></center>
-        <center><a href="https://perryma.tk/SamWolanin/sitemap.html">Sitemap(work in progress)</a></center>
-        <center><a href="https://perryma.tk/SamWolanin/chalkboard.html">Basically the to do list, but better</a></center>
-	</body>
+        
+	<body onload="buildMap('menubar')">
+            <div id="menubar" class="abc"></div>
+            <h1>Sam Wolanin</h1>
+            <img src="YoloSwag.jpg">
+            <h2>About Me:</h2>
+
+            <p>I like to play football and wrestle</p>
+            <p>I am in my junior year of high school at Perry</p>
+            <p>I'm 16 years old</p>
+            <p>I LOVE italian food</p>
+            <p>I have a pet dog named Rez</p>	
+            <br>
+            <p>In Software Engineering I want to learn how i could apply this to my life without making a career out of it</p>
+            <br>
+            <a href="https://codehs.com/">CodeHS</a>
+            <br>
+            <center><a href="https://perryma.tk/SamWolanin/popup.html">Popup!</a></center>
+            <center><a href="https://perryma.tk/SamWolanin/breakout.html">The First Game I Made!</a></center>
+            <center><a href="https://perryma.tk/SamWolanin/JavaEvents.html">Hey! Check out some of my favorite colors!</a></center>
+            <center><a href="https://perryma.tk/SamWolanin/todolist.html">Need help organizing your plans?</a></center>
+            <center><span onclick="clicked();"><a href="https://perryma.tk/SamWolanin/Top5Songs.html">Here's a list of the top 5 songs of the 20<sup>th</sup> century</a></span></center>
+            <center><a href="https://perryma.tk/SamWolanin/times-table.html">Hey kids, do you wanna do some math?</a></center>
+            <center><a href="https://perryma.tk/SamWolanin/tictactoe.html">Check out the second game I've made!</a></center>
+            <center><a href="https://perryma.tk/SamWolanin/sitemap.html">Sitemap(work in progress)</a></center>
+            <center><a href="https://perryma.tk/SamWolanin/chalkboard.html">Basically the to do list, but better</a></center>
+            
+        </body>
 </html>

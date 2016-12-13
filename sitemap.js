@@ -70,8 +70,8 @@ function buildMap(x){
     
     var linkMultiplication2 = document.createElement('A');
     var nestedListItem = document.createElement('LI');
-    linkMultiplication2.setAttribute("href", "timesTable2.html");
-    linkMultiplication2.textContent = "More Multiplication";
+    linkMultiplication2.setAttribute("href", "TimesTable2.0.html");
+    linkMultiplication2.textContent = "Multiplication, but better";
     nestedListItem.appendChild(linkMultiplication2);
     nestedList.appendChild(nestedListItem);
 }

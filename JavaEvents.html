@@ -7,13 +7,16 @@
                 document.body.style.backgroundColor = colorName;
             }
         </script>
+        <script src="sitemap.js"></script>
+        <link rel="stylesheet" type="text/css" href="menubar.css">
         <style>
             span {
                 font-weight:bold;
             }
         </style>
     </head>
-    <body>
+    <body onload="buildMap('menubar')">
+        <div id="menubar"></div>
     <txt>Hi! My name is Sam and my favorite colors are <span onmouseover=changeColor("red")>red</span>, <span onmouseover=changeColor("blue")>blue</span>, and <span onmouseover=changeColor("green")>green</span>. </txt>
         
     </body>
